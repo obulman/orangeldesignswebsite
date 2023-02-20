@@ -1,0 +1,182 @@
+/* CSS reset START */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+	color: white;
+	text-decoration: none;
+}
+/* CSS reset END */
+
+/*Background image*/
+body {
+	background: 
+    linear-gradient(rgba(225, 220, 249, 0.33),rgba(225, 220, 249, 0.33)),
+    url(../images/papyrus.webp) center top/contain repeat fixed;
+}
+/*Navigation styling*/
+
+/*Initializing fonts*/
+h1,h2,h3,h4 {
+	font-family: 'Fredoka', sans-serif;
+}
+a,p,li {
+	font-family: 'Lato', sans-serif;
+}
+h1{
+	font-size: 3rem;
+}
+h2{
+	font-size: 2.2rem;
+}
+h3{
+	font-size: 1.5rem;
+}
+h4{
+	font-size: 1rem;
+}
+
+/*Navigation*/
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: #3A173A;
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+}
+nav a{
+    display: flex;
+    align-items: center;
+	color: #FFD23F;
+	padding: 15px 15px;
+}
+nav a img{
+    width: 60px;
+}
+nav a h4{
+	margin-left: 11px;
+}
+nav ul{
+    display: none;
+}
+nav div a img{
+	width: 45px;
+}
+/*Landing page*/
+#hero{
+	height: 100vh;
+	background: url(../images/frame.jpg) center center/cover no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+	flex-direction: column;
+}
+h1{
+	font-weight: 600;
+	color: #FFD23F;
+}
+#hero a{
+	position: absolute;
+	justify-self: flex-end;
+	bottom: 30px;
+}
+#hero a img{
+	width: 60px;
+}
+/*Sections formatting*/
+h2{
+	padding: 30px 15px;
+}
+h3 {
+	color: white;
+	text-shadow: .1em .1em 0 hsl(200 50% 30%);
+	text-align: center;
+}
+/*Highlights section*/
+#highlights h2 {
+	color: #9448BC;
+}
+#highlights div img {
+	width: 100%;
+}
+/*Services Section*/
+#services h2{
+	color: #3A173A;
+}
+#services div{
+	position: relative;
+}
+#services div img {
+	width: 100%;
+}
+/*Footer*/
+
+footer {
+	display: flex;
+	background-color: #3A173A;
+    justify-content: space-between;
+    align-items: center;
+	padding: 15px;
+}
+footer div{
+	display: flex;
+	align-items: center;
+}
+footer div ul{
+	margin-left: 11px;
+}
+footer a img{
+	width: 60px;
+}
+footer ul li {
+	color: white;
+}
+footer div a img {
+	width: 45px;
+}
+#footlogo img{
+	width: 60px;
+}
