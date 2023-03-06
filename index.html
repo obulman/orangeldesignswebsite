@@ -18,57 +18,70 @@
 			<a href="index.html"><img src="images/logow.png" alt="navigation logo of the orangel designs website"><h4>Orangel Designs</h4></a>
 			<!-- Hamburger menu -->
 			<div>
-				<a href="#"><img src="images/hambergermenu.png" alt="&#9776;"></a>
+				<img src="images/hambergermenu.png" id="hamenu" alt="&#9776;">
+				<div id="menu-list">
+					<ul id="menu-links">
+						<li><a href="#">About</a></li>
+						<li><a href="#">Services</a></li>
+						<li><a href="#">Works</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+					<ul id="social-links">
+						<li><img src="images/behancew.png" alt="behance link">Behance</li>
+						<li><a href="#"><img src="images/linkedinw.png" alt="Linkedin link">Linkedin</a></li>
+						<li><a href="#"><img src="images/intagramw.png" alt="instagram link">Instagram</a></li>
+					</ul>
+				</div>
 			</div>
-			<ul>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Services</a></li>
-				<li><a href="#">Works</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
+
 		</nav>
 	</header>
 	<!-- The main includes all the information divided in a hero page and 2 sections -->
 	<main>
 	<!-- hero division with an intro text, arrow and background image -->
 		<div id="hero">
-			<h1>Versatile design for the masses!</h1>
+			<h1> <strong>Versatile design</strong> for the masses!</h1>
 			<a href="#highlights"><img src="images/arrowdown.png" alt="&#8595;"></a>
 		</div>
 	<!-- highlights section with a title and 3 preview images -->
 		<section id="highlights">
 			<h2>Project Highlights</h2>
+			<form>
+				<input type="radio" name="project" id="highlab" value="highlights">
+				<label for="highlab" id="label1">Project Highlights</label>
+				<input type="radio" name="project" id="lastlab" value="latest">
+				<label for="lastlab" id="label2">Latest Projects</label>
+			</form>
 			<div>
-				<h3>Candy’s Bakery</h3>
-				<img src="images/candy.jpg" alt="highlight1">
-			</div>
-			<div>
-				<h3>Oh So Polished Website</h3>
-				<img src="images/osp.jpg" alt="highlight2">
-			</div>
-			<div>
-				<h3>Betta Fish Illustration</h3>
-				<img src="images/betta.jpg" alt="highlight3">
+				<button><img src="images/larrow.png" alt="&lt;"></button>
+				<a href="#" class="project-card" id="h1">
+					<h3>Candy’s Bakery</h3>
+				</a>
+				<a href="#" class="project-card" id="h2">
+					<h3>Oh So Polished Website</h3>
+				</a>
+				<a href="#" class="project-card" id="h3">
+					<h3>Betta Fish Illustration</h3>
+				</a>
+				<button><img src="images/rarrow.png" alt="&gt;"></button>
 			</div>
 		</section>
 	<!-- services with an image preview of 4 sercives I provide -->
 		<section id="services">
 			<h2>My Services</h2>
 			<div>
-				<h3>Web Design</h3>
-				<img src="images/webd.jpg" alt="web design image">
-			</div>
-			<div>
-				<h3>Graphic Design</h3>
-				<img src="images/graphic.jpg" alt="graphic design image">
-			</div>
-			<div>
-				<h3>Illustration</h3>
-				<img src="images/illust.jpg" alt="illustration image">
-			</div>
-			<div>
-				<h3>3D modeling</h3>
-				<img src="images/model.jpg" alt="3d modeling image">
+				<a href="#" class="services-cards" id="s1">
+					<h3>Web Design</h3>
+				</a>
+				<a href="#" class="services-cards" id="s2">
+					<h3>Graphic Design</h3>
+				</a>
+				<a href="#" class="services-cards" id="s3">
+					<h3>Illustration</h3>
+				</a>
+				<a href="#" class="services-cards" id="s4">
+					<h3>3D modeling</h3>
+				</a>
 			</div>
 		</section>
 	</main>
@@ -81,7 +94,13 @@
 				<li><a href="mailto:orangeldesigns@gmail.com">orangeldesigns@gmail.com</a></li>
 				<li>© 2023, Orangel Designs</li>
 			</ul>
+			<ul id="social-footer">
+				<li> <a href=""><img src="images/linkedinw.png" alt="Linkedin"></a></li>
+				<li> <a href=""><img src="images/intagramw.png" alt="Instagram"></a></li>
+				<li> <a href=""><img src="images/behancew.png" alt="Behance"></a></li>
+			</ul>
 		</div>
+
 		<!-- Arrowup button -->
 		<div>
 			<a href="#top"><img src="images/arrowup2.png" alt="&#8593;"></a>
