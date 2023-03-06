@@ -45,6 +45,9 @@ a {
 	color: white;
 	text-decoration: none;
 }
+button {
+	all: initial;
+}
 /* CSS reset END */
 
 /*Background image*/
@@ -69,7 +72,7 @@ h2{
 	font-size: 2.2rem;
 }
 h3{
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 }
 h4{
 	font-size: 1rem;
@@ -81,7 +84,7 @@ nav {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    background: #3A173A;
+    background: #0e010eef;
 	position: fixed;
 	width: 100%;
 	z-index: 999;
@@ -90,7 +93,8 @@ nav a{
     display: flex;
     align-items: center;
 	color: #FFD23F;
-	padding: 15px 15px;
+	padding: 15px;
+	font-family: 'Fredoka', sans-serif;
 }
 nav a img{
     width: 60px;
@@ -98,11 +102,23 @@ nav a img{
 nav a h4{
 	margin-left: 11px;
 }
-nav ul{
-    display: none;
-}
-nav div a img{
+
+#hamenu{
 	width: 45px;
+	cursor: pointer;
+	padding: 15px;
+}
+#menu-list{
+	display: none;
+	padding: 15px;
+}
+#menu-list a{
+	color: white;
+	padding-left: 30px;
+	font-size: 1.25rem;
+}
+#menu-list a:hover{
+	color: #FFD23F;
 }
 /*Landing page*/
 #hero{
@@ -116,7 +132,10 @@ nav div a img{
 }
 h1{
 	font-weight: 600;
-	color: #FFD23F;
+	color: white;
+}
+h1 strong{
+	color: #FFD23F
 }
 #hero a{
 	position: absolute;
@@ -135,13 +154,56 @@ h3 {
 	text-shadow: .1em .1em 0 hsl(200 50% 30%);
 	text-align: center;
 }
+#highlights div, #services div  {
+	display: flex;
+	flex-direction: column;
+}
 /*Highlights section*/
 #highlights h2 {
 	color: #9448BC;
 }
-#highlights div img {
-	width: 100%;
+#highlights form {
+	display: none;
 }
+#highlights form input {
+	display: none;
+}
+
+#highlights button{
+	display: none;
+	height: 100px;
+	cursor: pointer;
+}
+#highlights button img{
+	height: 100px;
+	opacity: 30%;
+}
+#highlights button img:hover{
+	opacity: 100%;
+}
+
+/*Highlights gallery*/
+.project-card{
+	width: 100%;
+	height: 250px;
+	display: flex;
+	flex-direction: column-reverse;
+}
+.project-card h3{
+	width: 100%;
+	height: 30px;
+	background-color: rgba(0, 0, 0, 0.603);
+}
+#h1 {
+	background: url(../images/h1.jpg) center center/cover no-repeat;
+}
+#h2 {
+	background: url(../images/h2.jpg) center center/cover no-repeat;
+}
+#h3 {
+	background: url(../images/h3.jpg) center center/cover no-repeat;
+}
+
 /*Services Section*/
 #services h2{
 	color: #3A173A;
@@ -149,8 +211,37 @@ h3 {
 #services div{
 	position: relative;
 }
-#services div img {
+/*Services Gallery*/
+.services-cards{
 	width: 100%;
+	height: 250px;
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: center;
+	align-content: center;
+}
+.services-cards h3{
+	width: auto;
+	text-align: left;
+	align-self: start;
+	padding: 20px;
+	background-color: rgba(0, 0, 0, 0.603);
+}
+#s1 h3, #s3 h3 {
+	align-self: flex-end;
+	text-align: right;
+}
+#s1 {
+	background: url(../images/s1.jpg) center center/cover no-repeat;
+}
+#s2 {
+	background: url(../images/s2.jpg) center center/cover no-repeat;
+}
+#s3 {
+	background: url(../images/s3.jpg) center center/cover no-repeat;
+}
+#s4 {
+	background: url(../images/s4.jpg) center center/cover no-repeat;
 }
 /*Footer*/
 
@@ -164,6 +255,9 @@ footer {
 footer div{
 	display: flex;
 	align-items: center;
+}
+#social-footer{
+	display: none;
 }
 footer div ul{
 	margin-left: 11px;
@@ -179,4 +273,95 @@ footer div a img {
 }
 #footlogo img{
 	width: 60px;
+}
+/*Responsive styles for tablet and up*/
+@media screen and (min-width: 768px) {
+
+	#hero {
+		background: url(../images/framebig.jpg) center center/cover no-repeat;
+	}
+	h1 {
+		text-align: center;
+	}
+	#highlights div, #services div  {
+		display: flex;
+		flex-direction: row;
+	}
+
+	#social-footer{
+		display: flex;
+	}
+	#social-footer img{
+		height: 35px;
+		width: auto;
+		padding-left: 15px;
+	}
+	#highlights h2{
+		display: none;
+	}
+	#highlights form {
+		margin-top: 30px;
+		display: flex;
+		margin-left: 45px;
+	}
+
+	#highlights form label{
+		cursor: pointer;
+		font-size: 2.2rem;
+		font-family: 'Fredoka', sans-serif;
+		padding: 15px;
+		background-color: #D9D9D9;
+		color: #3a173a38;
+	}
+	#highlights form input:checked~#label1, #highlights form input:checked~#label2{
+		background-color: #9448BC;
+		color: #FFD23F;
+	}
+	#highlights form input:not(:checked)~#label2{
+		background-color: #D9D9D9;
+		color: #3a173a38;
+	}
+	#highlights div {
+		background-color: white;
+		padding: 45px 15px;
+		align-items: center;
+		box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	}
+	#highlights button{
+		display: inline;
+	}
+	.project-card{
+		margin: 0px 7px;
+	}
+	#services div{
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 60px;
+		box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	}
+	.services-cards{
+		width: 50%;
+		height: 300px;
+	}
+	#s1 h3, #s2 h3 {
+		align-self: flex-start;
+		text-align: right;
+	}
+	#s3 h3, #s4 h3 {
+		align-self: flex-end;
+		text-align: right;
+	}
+}
+/*Responsive styles for desktop and up*/
+@media screen and (min-width: 1024px) {
+	#hamenu{
+		display: none;
+	}
+	#menu-list, #menu-links{
+		display: flex;
+		flex-direction: row;
+	}
+	#social-links {
+		display: none;
+	}
 }
