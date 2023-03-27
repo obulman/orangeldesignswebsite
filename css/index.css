@@ -110,9 +110,10 @@ nav a h4{
 }
 #menu-list{
 	transform: translateX(100%);
-	transition: .4s;
-	width: 50%;
+	transition: .5s;
+	width: 300px;
 	position: absolute;
+	top: 0;
 }
 #social-links img{
 	padding-right: 15px;
@@ -127,7 +128,7 @@ nav div label{
 	height: 75px;
 }
 #menucheck:checked ~ #menu-list{
-	transform: translateX(-60%);
+	transform: translateX(-225px);
 	background-color: #070007;
 	box-shadow:  0px 1px 3px 0px rgba(0, 0, 0, 0.2),
 		0px 1px 1px 0px rgba(0, 0, 0, 0.14),
@@ -136,6 +137,7 @@ nav div label{
 #menucheck:checked ~ label img{
 	background-color: #070007;
 }
+
 #menu-list a{
 	color: white;
 	padding-left: 30px;
@@ -146,6 +148,20 @@ nav div label{
 	color: #FFD23F;
 	background-color: #3A173A;
 }
+/*X Hamburger*/
+#hamX{
+	font-family: 'Fredoka', sans-serif;
+	font-size: 2.2rem;
+	color: white;
+	text-align: right;
+	height: auto;
+	padding: 25px;
+	cursor: pointer;
+	transition: 0.5s;
+}
+#hamX:hover{
+	color: #FFD23F;
+}
 /*Landing page*/
 #hero{
 	height: 100vh;
@@ -155,6 +171,7 @@ nav div label{
 	align-items: center;
 	padding: 15px;
 	flex-direction: column;
+	overflow: hidden;
 }
 h1{
 	font-weight: 600;
@@ -167,10 +184,84 @@ h1 strong{
 	position: absolute;
 	justify-self: flex-end;
 	bottom: 30px;
+	transition: 0.5s;
+}
+#hero a:hover{
+	transform: scale(150%);
 }
 #hero a img{
 	width: 60px;
 }
+/* Landing page spinning cubes */
+.cube-wrapper {
+	width: 200px;
+	height: 200px;
+	position: relative;
+	perspective: 1000px;
+	padding: 75px;
+	padding-left: 0;
+  }
+  
+  .cube {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	perspective-origin: center;
+	transform-origin: center;
+	animation: rotate-cube 10s linear infinite;
+  }
+  
+  .face {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	opacity: 0.85;
+	font-family: 'Fredoka', sans-serif;
+	font-size: 2.2rem;
+	color: white;
+	text-align: center;
+	border-radius: 10%;
+  }
+  
+  .front {
+	transform: translateZ(100px);
+	background-color: #ffcc33;
+  }
+  
+  .back {
+	transform: translateZ(-100px) rotateY(180deg);
+	background-color: #ffcc33;
+  }
+  
+  .right {
+	transform: rotateY(-90deg) translatez(100px);
+	background-color: #9900cc;
+  }
+  
+  .left {
+	transform: rotateY(90deg) translatez(100px);
+	background-color: #9900cc;
+  }
+  
+  .top {
+	transform: rotateX(90deg) translateZ(100px);
+	background-color: #070007;
+  }
+  
+  .bottom {
+	transform: rotateX(-90deg) translateZ(100px);
+	background-color: #070007;
+  }
+  
+  @keyframes rotate-cube {
+	0% {
+	  transform: rotateX(0deg) rotateY(0deg)  rotateZ(0);
+	}
+	100% {
+	  transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+	}
+  }
 /*Sections formatting*/
 h2{
 	padding: 30px 15px;
@@ -214,12 +305,14 @@ h3 {
 	height: 250px;
 	display: flex;
 	flex-direction: column-reverse;
+	background-size: 100%;
 }
 .project-card h3{
 	width: 100%;
 	height: 30px;
 	background-color: rgba(0, 0, 0, 0.603);
 }
+
 #h1 {
 	background: url(../images/h1.jpg) center center/cover no-repeat;
 }
@@ -229,7 +322,14 @@ h3 {
 #h3 {
 	background: url(../images/h3.jpg) center center/cover no-repeat;
 }
-
+#h1, #h2, #h3{
+	background-color: #0e010eef;
+	transition: 0.5s all;
+	background-size: 100%;
+}
+#h1:hover,#h2:hover,#h3:hover {
+	background-size: 120%;
+}
 /*Services Section*/
 #services h2{
 	color: #3A173A;
@@ -253,6 +353,7 @@ h3 {
 	padding: 20px;
 	background-color: rgba(0, 0, 0, 0.603);
 }
+
 #s1 h3, #s3 h3 {
 	align-self: flex-end;
 	text-align: right;
@@ -268,6 +369,15 @@ h3 {
 }
 #s4 {
 	background: url(../images/s4.jpg) center center/cover no-repeat;
+}
+
+#s1, #s2, #s3, #s4{
+	background-color: #0e010eef;
+	transition: 0.5s all;
+	background-size: 100% 100%;
+}
+#s1:hover,#s2:hover,#s3:hover,#s4:hover {
+	background-size: 120% 120%;
 }
 /*Footer*/
 
@@ -296,6 +406,10 @@ footer ul li {
 }
 footer div a img {
 	width: 45px;
+	transition: 0.5s;
+}
+footer div a img:hover {
+	transform: scale(130%);
 }
 #footlogo img{
 	width: 60px;
@@ -389,7 +503,10 @@ footer div a img {
 		flex-direction: row;
 		transform: translateX(0);
 		position: relative;
-		
+		width: auto;
+	}
+	#menu-links a {
+		padding: 15px 30px;
 	}
 	#social-links {
 		display: none;
