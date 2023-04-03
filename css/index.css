@@ -72,12 +72,14 @@ h2{
 	font-size: 2.2rem;
 }
 h3{
-	font-size: 1.25rem;
+	font-size: 1.45rem;
 }
 h4{
 	font-size: 1rem;
 }
-
+strong{
+	font-weight: 900;
+}
 /*Navigation*/
 nav {
     display: flex;
@@ -266,7 +268,7 @@ h1 strong{
 h2{
 	padding: 30px 15px;
 }
-h3 {
+#highlights h3 {
 	color: white;
 	text-shadow: .1em .1em 0 hsl(200 50% 30%);
 	text-align: center;
@@ -382,6 +384,9 @@ h3 {
 /*Footer*/
 
 footer {
+	width: 100%;
+	box-sizing: border-box;
+	bottom: 0;
 	display: flex;
 	background-color: #3A173A;
     justify-content: space-between;
@@ -517,7 +522,9 @@ footer div a img:hover {
 }
 
 /*Contact page CSS*/
-
+main{
+	margin-bottom: 100px;
+}
 #contHeader {
 	height: 160px;
 	background-color: #9900cc;
@@ -526,7 +533,7 @@ footer div a img:hover {
 	align-items: center;
 	justify-content: end;
 	color: white;
-	padding: 15px;
+	padding: 15px 5%;
 }
 #contHeader strong{
 	font-weight: 700;
@@ -541,12 +548,134 @@ footer div a img:hover {
 }
 #contMain h2 {
 	color: #9900cc;
-	height: 40px;
+	height: 30px;
 	display: flex;
+	padding-left: 0;
 }
 #contMain h2 img{
-	height: 40px;
+	height: 30px;
 	margin-right: 7px;
+}
+#contForm, #contSide{
+	margin-left: 10%;
+	margin-right: 10%;
+}
+#innnerform {
+	width: 100%;
+	max-width: 640px;
+	background-color: white;
+	padding: 30px;
+	box-sizing: border-box;
+	border-radius: 16px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: stretch;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+}
+#innnerform>* {
+	margin-bottom: 15px;
+	padding: 7px;
+	border-radius: 7px;
+	border: #9448BC 2px solid;
+	background-color: #e1dcf98d;
+	font-family: 'Lato', sans-serif;
+	color: #C2A4D1;
+}
+#innnerform>*:focus{
+	background-color: white;
+	color: #070007;
+}
+#innnerform .button {
+	font-family: 'Fredoka', sans-serif;
+	width: 211px;
+	height: 53px;
+	align-self: center;
+	font-size: 1.2rem;
+	border: 0;
+	background-color: #ffcc33;
+	color: #9448BC;
+	box-shadow: 0 4px 3px rgba(0,0,0,0.25), 0 2px 6px rgba(0,0,0,0.22);
+	cursor: pointer;
+
+}
+select{
+	background-color: #FFD23F;
+	color: #9448BC;
+	font-family: 'Fredoka', sans-serif;
+	font-size: 1.1rem;
+	cursor: pointer;
+}
+select:focus{
+	background-color: #9448BC;
+	color: #ffcc33;
+}
+textarea{
+	resize: none;
+	height: 200px;
+}
+#contFaq ul li h3{
+	font-size: 1.1rem;
+	color: #9448BC;
+	text-align: left;
+	text-shadow: none;
+}
+#contFaq ul li p{
+	background-color: #070007;
+	color: white;
+	margin-top: 3px;
+	padding: 7px;
+}
+#contSoc ul{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+#contSoc ul li{
+	width: 100%;
+	display: flex;
+}
+#contSoc ul li a{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	max-width: 450px;
+	padding: 12.5px;
+	box-shadow: 0 4px 3px rgba(0,0,0,0.25), 0 2px 6px rgba(0,0,0,0.22);
+	margin-bottom: 15px;
+	border-radius: 11px;
+	
+}
+#contSoc ul li img{
+	height: 50px;
+}
+#contSoc h3{
+	margin-left: 7px;
+}
+#soc1 a{
+	background-color: #B8C9F5;
+	color: #3C64CB;
+}
+#soc2 a{
+	background-color: #DBD5DE;
+	color: #070007;
+}
+#soc3 a{
+	background-color: #F3C6DC;
+	color: #FF288F;
+}
+@media screen and (max-width: 420px) {
+nav a h4{
+	font-size: 0.8rem;
+}
+h2 {
+	font-size: 1.7rem;
+}
+textarea {
+	height: 120px;
+}
 }
 @media screen and (min-width: 768px) {
 	#contHeader {
@@ -561,10 +690,13 @@ footer div a img:hover {
 	#contMain{
 		display: grid; 
 		grid-template-columns: 1fr 1fr; 
-		gap: 0px 15px; 
+		gap: 0px 30px; 
 	}
 }
 @media screen and (min-width: 1024px) {
+	#contFaq ul li h3 strong{
+		display: none;
+	}
 	#contHeader li{
 		margin-right: 15px;
 		margin-bottom: 20px;
