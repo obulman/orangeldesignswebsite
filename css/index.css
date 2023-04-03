@@ -516,3 +516,57 @@ footer div a img:hover {
 	}
 }
 
+/*Contact page CSS*/
+
+#contHeader {
+	height: 160px;
+	background-color: #9900cc;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: end;
+	color: white;
+	padding: 15px;
+}
+#contHeader strong{
+	font-weight: 700;
+}
+#contHeader li{
+	margin-bottom: 7px;
+}
+
+#contMain{
+	display: flex;
+	flex-direction: column;
+}
+#contMain h2 {
+	color: #9900cc;
+	height: 40px;
+	display: flex;
+}
+#contMain h2 img{
+	height: 40px;
+	margin-right: 7px;
+}
+@media screen and (min-width: 768px) {
+	#contHeader {
+		height: 125px;
+		flex-direction: row;
+		align-items: end;
+		justify-content: start;
+	}
+	#contHeader li{
+		margin-bottom: 15px;
+	}
+	#contMain{
+		display: grid; 
+		grid-template-columns: 1fr 1fr; 
+		gap: 0px 15px; 
+	}
+}
+@media screen and (min-width: 1024px) {
+	#contHeader li{
+		margin-right: 15px;
+		margin-bottom: 20px;
+	}
+}
