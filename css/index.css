@@ -150,6 +150,26 @@ nav div label{
 	color: #FFD23F;
 	background-color: #3A173A;
 }
+button {
+	font-family: 'Fredoka', sans-serif;
+	font-size: 1.45rem;
+	padding: 7.5px 30px;
+	border-radius: 7px;
+	color: #ffcc33;
+	background-color: #9448BC;
+	cursor: pointer;
+}
+button img{
+	height: 30px;
+}
+.dark-btn{
+	background-color: #3A173A;
+	color: #FFD23F;
+}
+.light-btn{
+	background-color: #ffcc33;
+	color: #9448BC;
+}
 /*X Hamburger*/
 #hamX{
 	font-family: 'Fredoka', sans-serif;
@@ -701,4 +721,91 @@ textarea {
 		margin-right: 15px;
 		margin-bottom: 20px;
 	}
+}
+
+
+/*Works page CSS*/
+
+#workHeader {
+	height: 160px;
+	background-color: #9900cc;
+	display: flex;
+	flex-direction: row;
+	align-items: end;
+	justify-content: space-between;
+	color: white;
+	padding: 15px 10%;
+}
+#workHeader strong{
+	font-weight: 700;
+}
+#workHeader li{
+	margin-bottom: 7px;
+}
+.center-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.gallery-grid{
+	display: grid; 
+	width: 80%;
+	padding: 30px 10%;
+	margin: 30px 0;
+	grid-template-columns: 1fr 1fr 1fr 1fr; 
+	grid-template-rows: 1fr 1fr; 
+	gap: 15px 15px; 
+	grid-template-areas: 
+	  ". . . ."
+	  ". . . .";
+	  justify-content: center; 
+	  align-items: center; 
+	background-color: white;
+
+}
+.portfolio-card h3{
+	background-color: #9900cc63;
+	color: white;
+	text-align: center;
+}
+.featured h3{
+	background-color: #ffcc33;
+	color: #9900cc;
+}
+.gallery-item{
+	width: 100%;
+	cursor: pointer;
+}
+
+
+#w1 {
+	background: url(../images/w1.jpg) center center/cover no-repeat;
+}
+#w2 {
+	background: url(../images/w2.jpg) center center/cover no-repeat;
+}
+#w3 {
+	background: url(../images/w3.jpg) center center/cover no-repeat;
+}
+#w4 {
+	background: url(../images/w4.jpg) center center/cover no-repeat;
+}
+#w5 {
+	background: url(../images/w5.jpg) center center/cover no-repeat;
+}
+#w6 {
+	background: url(../images/w6.jpg) center center/cover no-repeat;
+}
+#w7 {
+	background: url(../images/w7.jpg) center center/cover no-repeat;
+}
+#w8 {
+	background: url(../images/w8.jpg) center center/cover no-repeat;
+}
+#w1, #w2, #w3, #w4, #w5, #w6, #w7, #w8{
+	transition: 0.5s all;
+	background-size: 100% 100%;
+}
+#w1:hover, #w2:hover, #w3:hover, #w4:hover, #w5:hover, #w6:hover, #w7:hover, #w8:hover{
+	background-size: 120% 120%;
 }
