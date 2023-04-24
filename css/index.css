@@ -865,3 +865,12 @@ textarea {
 	
 	}
 }
+
+
+/*About Page CSS*/
+
+#abcont {
+	display: flex;
+	flex-direction: column;
+	margin: 0 40px;
+}

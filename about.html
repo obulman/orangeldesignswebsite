@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orangel Designs - About</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body id="top">
+    <header>
+		<!-- The header includes the logo and navigation links that might be hidden within a hamburger menu on mobile versions -->
+		<nav>
+			<a href="index.html"><img src="images/logow.png" alt="navigation logo of the orangel designs website"><h4>Orangel Designs</h4><h4>| WORKS</h4></a>
+			<!-- Hamburger menu -->
+			<div>
+				<input type="checkbox" name="menucheck" id="menucheck">
+				<label for="menucheck">
+					<img src="images/hambergermenu.png" id="hamenu" alt="&#9776;">
+				</label>
+				<div id="menu-list">
+					<label for="menucheck" id="hamX">
+						X
+					</label>
+					<ul id="menu-links">
+                        <li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="#">Services</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+					<ul id="social-links">
+						<li><a href="#"><img src="images/behancew.png" alt="behance link">Behance</a></li>
+						<li><a href="#"><img src="images/linkedinw.png" alt="Linkedin link">Linkedin</a></li>
+						<li><a href="#"><img src="images/intagramw.png" alt="instagram link">Instagram</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+        <ul id="workHeader">
+            <li><strong>A creative Web Designer & Artist that provides branding, web & visual solutions to institutions, startups, agencies with a needs-first focus.</strong></li>
+		</ul>
+	</header>
+    
+    
+    <main id="abcont">
+        <div id="astory">
+            <h2><img src="images/horiline.png" alt=""> My Story</h2>
+            <img src="images/portrait.jpg" alt="personal portrait">
+            <p>
+                I was born in Caracas, Venezuela in the 90s, an interesting time where the transitions from the physical to the digital starting taking its roots in the country, and with both parents all involved in this new wave, I became very early interested in computers and how they worked.
+                <br><br>
+                Through my youth my second interest flourished in the arts, especially drawing and painting, and when it came time to decide for a career, I decided to combine my 2 passions by pursuing graphic design. Currently I am in the process of transitioning into being and front-end developer and web designer.
+            </p>
+        </div>
+        <div id="aexperience">
+            <h2><img src="images/horiline.png" alt=""> My Experience</h2>
+
+            <div>
+                <span>2018</span>
+                <button>
+                    Graphic Designer <br>
+                    Azabache Productions <br>
+                    Caracas, Venezuela
+                </button>
+            </div>
+
+            <div>
+                <span>2016</span>
+                <button>
+                    Graphic Design Intern <br>
+                    CANTV <br>
+                    Caracas, Venezuela
+                </button>
+            </div>
+
+            <div>
+                <span>2018</span>
+                <button>
+                    Webmaster <br>
+                    CONATEL <br>
+                    Caracas, Venezuela
+                </button>
+            </div>
+        </div>
+
+        <div id="askills">
+            <h2><img src="images/horiline.png" alt=""> My Skills</h2>
+
+            <div class="tab">
+                <button class="tablinks" onclick="selectSkill(event, 'Hard')">Hard Skills</button>
+                <button class="tablinks" onclick="selectSkill(event, 'Soft')">Soft Skills</button>
+            </div>
+
+            <div id="Hard" class="tabcontent">
+                <button class="accordion">+ Web Design</button>
+                <div class="panel">
+                <p>Lorem ipsum...</p>
+                </div>
+                <button class="accordion">+ Graphic Design</button>
+                <div class="panel">
+                <p>Lorem ipsum...</p>
+                </div>
+                <button class="accordion">+ Misc</button>
+                <div class="panel">
+                <p>Lorem ipsum...</p>
+                </div>
+            </div>
+
+            <div id="Soft" class="tabcontent">
+                <button class="accordion">+ Creativity</button>
+                <div class="panel">
+                <p>Lorem ipsum...</p>
+                </div>
+                <button class="accordion">+ Problem-Solving</button>
+                <div class="panel">
+                <p>Lorem ipsum...</p>
+                </div>
+                <button class="accordion">+ Adaptability</button>
+                <div class="panel">
+                <p>Lorem ipsum...</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="aquestions">
+            <h2><img src="images/horiline.png" alt=""> <span>Frequently</span> Asked Questions</h2>
+
+            <button class="accordion">+ Why work with me?</button>
+            <div class="panel">
+            <p>Lorem ipsum...</p>
+            </div>
+            
+            <button class="accordion">+ Rationale around pricing?</button>
+            <div class="panel">
+            <p>Lorem ipsum...</p>
+            </div>
+            
+            <button class="accordion">+ How is your process with clients?</button>
+            <div class="panel">
+            <p>Lorem ipsum...</p>
+            </div>
+
+            <button class="accordion">+ Size of companies that you work for?</button>
+            <div class="panel">
+            <p>Lorem ipsum...</p>
+            </div>  
+
+            <button class="accordion">+ Size of companies that you work for?</button>
+            <div class="panel">
+            <p>Lorem ipsum...</p>
+            </div>
+        </div>
+        
+    </main>
+
+
+    <!-- Footer with logo, copyright, social media links and a top button -->
+    <footer>
+		<div>
+			<a href="#top" id="footlogo"><img src="images/logow.png" width="162" alt="footer logo"></a>
+			<!-- basic contact info and copyright -->
+			<ul>
+				<li><a href="mailto:orangeldesigns@gmail.com">orangeldesigns@gmail.com</a></li>
+				<li>© 2023, Orangel Designs</li>
+			</ul>
+			<ul id="social-footer">
+				<li> <a href=""><img src="images/linkedinw.png" alt="Linkedin"></a></li>
+				<li> <a href=""><img src="images/intagramw.png" alt="Instagram"></a></li>
+				<li> <a href=""><img src="images/behancew.png" alt="Behance"></a></li>
+			</ul>
+		</div>
+
+		<!-- Arrowup button -->
+		<div>
+			<a href="#top"><img src="images/arrowup2.png" alt="&#8593;"></a>
+		</div>
+	</footer>
+</body>
+</html>
