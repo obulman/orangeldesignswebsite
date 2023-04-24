@@ -319,6 +319,7 @@ h2{
 	display: none;
 	height: 100px;
 	cursor: pointer;
+	background-color: white;
 }
 #highlights button img{
 	height: 100px;
@@ -415,7 +416,7 @@ footer {
 	box-sizing: border-box;
 	bottom: 0;
 	display: flex;
-	background-color: #3A173A;
+	background-color: #12020E;
     justify-content: space-between;
     align-items: center;
 	padding: 15px;
@@ -873,4 +874,168 @@ textarea {
 	display: flex;
 	flex-direction: column;
 	margin: 0 40px;
+}
+
+#abcont h2{
+	text-align: right;
+	color: #9448BC;
+}
+.hline {
+	width: 140px;
+	padding-bottom: 10px;
+}
+#aportrait{
+	width: 33vw;
+	float: left;
+	margin-left: -40px;
+	margin-right: 15px;
+}
+
+
+.aexpcard {
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;
+}
+.aexpcard span{
+	color: #FFD23F;
+	background-color: #9448BC;
+	padding: 30px 20px;
+	border-radius: 50%;
+	font-size: 1.15rem;
+}
+.aexpcard button{
+	background-color: white;
+	color: black;
+	width: 100%;
+	font-family: 'Lato', sans-serif;
+	font-weight: 600;
+	font-size: 1.15rem;
+	margin-left: 15px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.aexpcard:last-of-type span{
+	background-color: #3A173A;
+}
+
+
+/* Style the tab - Note from Orangel - Modified version of W3 website tab code Based on */
+.tab {
+	overflow: hidden;
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+	background-color: #D9D9D9;
+	color: dimgrey;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-family: 'Lato', sans-serif;
+	font-weight: 600;
+	font-size: 1.15rem;
+	padding: 14px 16px;
+	transition: 0.3s;
+	border-radius: 0;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+	background-color: #C2A4D1;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+	background-color: #9448BC;
+	color: #FFD23F;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+	display: none;
+	width: 100%;
+	border-top: none;
+  }
+  .tabcontent button{
+	border-radius: 0;
+	box-shadow: inset 0 3px 6px rgba(0,0,0,0.16), inset 0 3px 6px rgba(0,0,0,0.23);
+	width: 80%;
+	font-family: 'Lato', sans-serif;
+	font-weight: 600;
+  }
+
+  /*W3 based accordion*/
+
+  .accordion {
+	transition: 0.4s;
+	font-size: 1.15rem;
+	font-family: 'Lato', sans-serif;
+	font-weight: 600;
+  }
+  
+  .active, .accordion:hover {
+	background-color: #3A173A;
+  }
+
+  .panel {
+	padding: 18px 18px;
+	background-color: #D9D9D9;
+	display: none;
+	overflow: hidden;
+  }
+
+  /*FAQ styling*/
+
+  #aquestcont{
+	background-color: #3A173A;
+	margin: 0 -40px;
+	padding: 15px 40px;
+	padding-bottom: 70px;
+  }
+  #aquestions button{
+	background-color: #3A173A;
+	font-size: 1.15rem;
+	width: 100%;
+	padding: 10px 0;
+	border-radius: 0;
+	border-bottom: 4px solid #9448BC;
+	font-family: 'Lato', sans-serif;
+	font-weight: 600;
+  }
+
+  #aquestions .panel {
+	padding: 18px 18px;
+	background-color: #9448BC;
+	display: none;
+	overflow: hidden;
+  }
+
+  @media screen and (min-width: 768px) {
+	#abcont{
+		display: grid; 
+		grid-template-columns: 1fr 1fr; 
+		gap: 0px 30px;
+	}
+	#aportrait{
+		max-width: 250px;
+		float: left;
+		margin-left: -15%;
+	}
+	#abwrap{
+		display: flex;
+		justify-content: center;
+	}
+	#aquestcont{
+		background-color: #3A173A;
+		margin: 0;
+	}
+}
+@media screen and (min-width: 1024px) {
+	#aportrait{
+		margin-left: -15%;
+	}
+	#abcont{
+		max-width: 1280px;
+	}
 }
