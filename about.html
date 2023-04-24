@@ -9,6 +9,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
+    <script defer src="scripts/about.js"></script>
 </head>
 <body id="top">
     <header>
@@ -45,10 +46,11 @@
 	</header>
     
     
-    <main id="abcont">
+    <main id="abwrap">
+    <div id="abcont">
         <div id="astory">
-            <h2><img src="images/horiline.png" alt=""> My Story</h2>
-            <img src="images/portrait.jpg" alt="personal portrait">
+            <h2><img class="hline" src="images/horiline.png" alt=""> My Story</h2>
+            <img id="aportrait" src="images/portrait.jpg" alt="personal portrait">
             <p>
                 I was born in Caracas, Venezuela in the 90s, an interesting time where the transitions from the physical to the digital starting taking its roots in the country, and with both parents all involved in this new wave, I became very early interested in computers and how they worked.
                 <br><br>
@@ -56,9 +58,9 @@
             </p>
         </div>
         <div id="aexperience">
-            <h2><img src="images/horiline.png" alt=""> My Experience</h2>
+            <h2><img class="hline" src="images/horiline.png" alt=""> My Experience</h2>
 
-            <div>
+            <div class="aexpcard">
                 <span>2018</span>
                 <button>
                     Graphic Designer <br>
@@ -67,16 +69,7 @@
                 </button>
             </div>
 
-            <div>
-                <span>2016</span>
-                <button>
-                    Graphic Design Intern <br>
-                    CANTV <br>
-                    Caracas, Venezuela
-                </button>
-            </div>
-
-            <div>
+            <div class="aexpcard">
                 <span>2018</span>
                 <button>
                     Webmaster <br>
@@ -84,13 +77,22 @@
                     Caracas, Venezuela
                 </button>
             </div>
+
+            <div class="aexpcard">
+                <span>2016</span>
+                <button>
+                    Graphic Design Intern <br>
+                    CANTV <br>
+                    Caracas, Venezuela
+                </button>
+            </div>
         </div>
 
         <div id="askills">
-            <h2><img src="images/horiline.png" alt=""> My Skills</h2>
+            <h2><img class="hline" src="images/horiline.png" alt=""> My Skills</h2>
 
             <div class="tab">
-                <button class="tablinks" onclick="selectSkill(event, 'Hard')">Hard Skills</button>
+                <button class="tablinks" onclick="selectSkill(event, 'Hard')" id="defaultOpen">Hard Skills</button>
                 <button class="tablinks" onclick="selectSkill(event, 'Soft')">Soft Skills</button>
             </div>
 
@@ -126,34 +128,35 @@
         </div>
 
         <div id="aquestions">
-            <h2><img src="images/horiline.png" alt=""> <span>Frequently</span> Asked Questions</h2>
+            <h2><img class="hline" src="images/horiline.png" alt=""> <span>Frequently</span> Asked Questions</h2>
+            <div id="aquestcont">
+                <button class="accordion">+ Why work with me?</button>
+                <div class="panel">
+                <p>Lorem ipsum...</p>
+                </div>
+                
+                <button class="accordion">+ Rationale around pricing?</button>
+                <div class="panel">
+                <p>Lorem ipsum...</p>
+                </div>
+                
+                <button class="accordion">+ How is your process with clients?</button>
+                <div class="panel">
+                <p>Lorem ipsum...</p>
+                </div>
 
-            <button class="accordion">+ Why work with me?</button>
-            <div class="panel">
-            <p>Lorem ipsum...</p>
-            </div>
-            
-            <button class="accordion">+ Rationale around pricing?</button>
-            <div class="panel">
-            <p>Lorem ipsum...</p>
-            </div>
-            
-            <button class="accordion">+ How is your process with clients?</button>
-            <div class="panel">
-            <p>Lorem ipsum...</p>
-            </div>
+                <button class="accordion">+ Size of companies that you work for?</button>
+                <div class="panel">
+                <p>Lorem ipsum...</p>
+                </div>  
 
-            <button class="accordion">+ Size of companies that you work for?</button>
-            <div class="panel">
-            <p>Lorem ipsum...</p>
-            </div>  
-
-            <button class="accordion">+ Size of companies that you work for?</button>
-            <div class="panel">
-            <p>Lorem ipsum...</p>
+                <button class="accordion">+ Size of companies that you work for?</button>
+                <div class="panel">
+                <p>Lorem ipsum...</p>
+                </div>
             </div>
         </div>
-        
+    </div>
     </main>
 
 
