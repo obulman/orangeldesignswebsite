@@ -28,7 +28,7 @@
 					<ul id="menu-links">
                         <li><a href="index.html">Home</a></li>
 						<li><a href="about.html">About</a></li>
-						<li><a href="#">Services</a></li>
+						<li><a href="services.html">Services</a></li>
 						<li><a href="works.html">Works</a></li>
 					</ul>
 					<ul id="social-links">
@@ -54,16 +54,16 @@
 			<h2><img src="images/arrowright.png" alt=""> Contact Form:</h2>
 			<div>
 				 <form id="innnerform" method="post" action="http://ss1.ciwcertified.com/cgi-bin/process.pl">
-				 	<select name="Subject" id="subject">
+				 	<select required name="Subject" id="subject">
 				 		<option value="none" selected disabled hidden>Choose Topic</option>
 					    <option value="gig">Gig proposal</option>
 					    <option value="job">Job offer</option>
 					    <option value="request">Advice and Requests</option>
 					    <option value="other">Other Issue</option>
 			  		</select>
-					<input id="name" type="text" name="Name" value="Type your name...">
-					<input id="email" type="email" name="Email" value="Input email...">
-					<textarea id="issuetext" name="issuetext">Type your inquiry here...</textarea>
+					<input required id="name" type="text" name="Name" value="Type your name...">
+					<input required id="email" type="email" name="Email" value="Input email...">
+					<textarea required minlength="30" id="issuetext" name="issuetext">Type your inquiry here...</textarea>
 					<input class="button" type="submit" value="SUBMIT!">
 				</form>
 			</div>
