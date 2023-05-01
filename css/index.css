@@ -1039,3 +1039,149 @@ textarea {
 		max-width: 1280px;
 	}
 }
+
+/* Services Page */
+#servMain h3{
+	margin: 20px 30px;
+	margin-top: 0;
+	text-align: center;
+}
+.gallery-grid-services{
+	display: grid; 
+	width: 80%;
+	padding: 30px 10%;
+	margin: 30px 0;
+	grid-template-columns: 1fr; 
+	grid-template-rows: 1fr 1fr 1fr 1fr; 
+	gap: 0px 0px; 
+	grid-template-areas: 
+	"."
+	"."
+	"."
+	"."; 
+	  justify-content: center; 
+	  align-items: center; 
+
+}
+.services-cards-main {
+	height: 380px;
+	max-width: 480px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: white;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	margin-bottom: 30px;
+}
+.services-cards-main div{
+	padding: 20px;
+}
+.services-cards-main div:first-of-type {
+	height: 100px;
+}
+.services-cards-main button{
+	font-size: 1.15rem;
+	border-radius: 0;
+	width: 100%;
+	text-align: center;
+	padding: 7.5px 0;
+}
+
+
+/* Modal styling */
+
+ /* The Modal (background) */
+ .modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	justify-content: center;
+	align-items: center;
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #fefefe;
+	padding: 20px 50px;
+	border-radius: 5px;
+	
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  .modal-content span{
+	background-color: #9900cc;
+	width: 100%;
+	text-align: center;border-radius: 5px;
+	color: #ffcc33;
+	transition: color 0.3s;
+	margin-top: 20px;
+  }
+  .modal-content ul{
+	list-style: square;
+  }
+  .skill-list {
+	display: flex;
+	list-style:none;
+	flex-wrap: wrap;
+  }
+  .skill-list button{
+	font-size: 1rem;
+	background-color: #aaa;
+	color: #070007;
+	margin-left: 5px;
+	margin-bottom: 5px;
+  }
+  .modal-content ul li{
+	margin-bottom: 5px;
+  }
+  .modal-content ul ul{
+	list-style: circle;
+  }
+  
+  /* The Close Button */
+  .close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+  } 
+
+  @media screen and (min-width: 768px) {
+	.gallery-grid-services{
+		display: grid; 
+		width: 80%;
+		padding: 30px 10%;
+		margin: 30px 0;
+		grid-template-columns: 1fr 1fr; 
+		grid-template-rows: 1fr 1fr; 
+		gap: 0px 0px; 
+		grid-template-areas: 
+		". ."
+		". ."; 
+		  justify-content: center; 
+		  align-items: center; 
+		background-color: white;
+		box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	}
+	.services-cards-main {
+		margin-left: 30px;
+	}
+}
