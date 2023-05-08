@@ -10,6 +10,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script defer src="scripts/index.js"></script>
 </head>
 <body id="top">
 	<header>
@@ -62,40 +63,51 @@
 	<!-- highlights section with a title and 3 preview images -->
 		<section id="highlights">
 			<h2>Project Highlights</h2>
-			<form>
-				<input type="radio" name="project" id="highlab" value="highlights">
-				<label for="highlab" id="label1">Project Highlights</label>
-				<input type="radio" name="project" id="lastlab" value="latest">
-				<label for="lastlab" id="label2">Latest Projects</label>
-			</form>
+			<div class="tab">
+                <button class="tablinks" onclick="selectTab(event, 'hightab')" id="defaultOpen">Project Highlights</button>
+                <button class="tablinks" onclick="selectTab(event, 'latab')">Lastest Projects</button>
+            </div>
 			<div>
-				<button><img src="images/larrow.png" alt="&lt;"></button>
-				<a href="#" class="project-card" id="h1">
-					<h3>Candy’s Bakery</h3>
-				</a>
-				<a href="#" class="project-card" id="h2">
-					<h3>Oh So Polished Website</h3>
-				</a>
-				<a href="#" class="project-card" id="h3">
-					<h3>Betta Fish Illustration</h3>
-				</a>
-				<button><img src="images/rarrow.png" alt="&gt;"></button>
+				<button class="arrowbutton"><img src="images/larrow.png" alt="&lt;"></button>
+				<div id="hightab" class="tabcontent">
+					<a href="works.html" class="project-card" id="h2">
+						<h3>Oh So Polished Website</h3>
+					</a>
+					<a href="works.html" class="project-card" id="w4">
+						<h3>O'design Store</h3>
+					</a>
+					<a href="works.html" class="project-card" id="w7">
+						<h3>Trex Illustration</h3>
+					</a>
+				</div>
+				<div id="latab" class="tabcontent">
+					<a href="works.html" class="project-card" id="w1">
+						<h3>Candy’s Bakery</h3>
+					</a>
+					<a href="works.html" class="project-card" id="w2">
+						<h3>Oh So Polished Website</h3>
+					</a>
+					<a href="works.html" class="project-card" id="w3">
+						<h3>O'design Store</h3>
+					</a>
+				</div>
+				<button class="arrowbutton"><img src="images/rarrow.png" alt="&gt;"></button>
 			</div>
 		</section>
 	<!-- services with an image preview of 4 sercives I provide -->
 		<section id="services">
 			<h2>My Services</h2>
 			<div>
-				<a href="#" class="services-cards" id="s1">
+				<a href="services.html" class="services-cards" id="s1">
 					<h3>Web Design</h3>
 				</a>
-				<a href="#" class="services-cards" id="s2">
+				<a href="services.html" class="services-cards" id="s2">
 					<h3>Graphic Design</h3>
 				</a>
-				<a href="#" class="services-cards" id="s3">
+				<a href="services.html" class="services-cards" id="s3">
 					<h3>Illustration</h3>
 				</a>
-				<a href="#" class="services-cards" id="s4">
+				<a href="services.html" class="services-cards" id="s4">
 					<h3>3D modeling</h3>
 				</a>
 			</div>
