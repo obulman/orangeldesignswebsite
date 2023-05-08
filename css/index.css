@@ -23,6 +23,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+html{
+	scroll-behavior: smooth;
+}
 body {
 	line-height: 1;
 }
@@ -86,10 +89,11 @@ nav {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    background: #0e010eef;
+    background: #12020E;
 	position: fixed;
 	width: 100%;
 	z-index: 999;
+	transition: background 0.3s;
 }
 nav a{
     display: flex;
@@ -109,6 +113,10 @@ nav a h4{
 	width: 45px;
 	cursor: pointer;
 	padding: 15px;
+	transition: all 0.5s;
+}
+#hamenu:hover{
+	background-color: #070007;
 }
 #menu-list{
 	transform: translateX(100%);
@@ -117,10 +125,14 @@ nav a h4{
 	position: absolute;
 	top: 0;
 }
+#social-links:hover img{
+	transform: scale(1.2);
+}
 #social-links img{
 	padding-right: 15px;
 	height: auto;
 	width: 45px;
+	transition: all 0.5s;
 }
 #menucheck {
 	display: none ;
@@ -190,6 +202,7 @@ button img{
 }
 #hamX:hover{
 	color: #FFD23F;
+	
 }
 /*Landing page*/
 #hero{
@@ -307,20 +320,53 @@ h2{
 /*Highlights section*/
 #highlights h2 {
 	color: #9448BC;
-}
-#highlights form {
-	display: none;
-}
-#highlights form input {
-	display: none;
+	text-align: center;
 }
 
-#highlights button{
+
+#highlights .tab{
 	display: none;
-	height: 100px;
-	cursor: pointer;
-	background-color: white;
+	justify-content: center;
+	padding: 60px 0 0 0;
 }
+.arrowbutton{
+	display: none;
+}
+#highlights .tab button {
+	background-color: #D9D9D9;
+	color: dimgrey;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-family: 'Fredoka', sans-serif;
+	font-weight: 400;
+	font-size: 2.2rem;
+	padding: 14px 16px;
+	transition: 0.3s;
+	border-radius: 0;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+  
+  /* Change background color of buttons on hover */
+  #highlights .tab button:hover {
+	background-color: #C2A4D1;
+  }
+  
+  /* Create an active/current tablink class */
+  #highlights .tab button.active {
+	background-color: #9448BC;
+	color: #FFD23F;
+  }
+  #highlights .tabcontent{
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	background-color: rgba(255, 127, 80, 0);
+	box-shadow: none;
+  }
+
+
 #highlights button img{
 	height: 100px;
 	opacity: 30%;
@@ -352,6 +398,9 @@ h2{
 #h3 {
 	background: url(../images/h3.jpg) center center/cover no-repeat;
 }
+#h4 {
+	background: url(../images/h4.png) center center/cover no-repeat;
+}
 #h1, #h2, #h3{
 	background-color: #0e010eef;
 	transition: 0.5s all;
@@ -361,15 +410,25 @@ h2{
 	background-size: 120%;
 }
 /*Services Section*/
+#services{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 #services h2{
 	color: #3A173A;
+	width: auto;
+	text-align: center;
 }
 #services div{
 	position: relative;
+	max-width: 1400px;
+	width: 100%;
 }
 /*Services Gallery*/
 .services-cards{
 	width: 100%;
+	max-width: 700px;
 	height: 250px;
 	display: flex;
 	flex-direction: column-reverse;
@@ -449,7 +508,18 @@ footer div a img:hover {
 }
 /*Responsive styles for tablet and up*/
 @media screen and (min-width: 768px) {
-
+	#highlights .tabcontent{
+		display: flex;
+		flex-direction: row;
+		padding: 0;
+	  }
+	#highlights .tab{
+		display: flex;
+	}
+	.arrowbutton{
+		display: flex;
+		background-color: #07000700;
+	}
 	#hero {
 		background: url(../images/framebig.jpg) center center/cover no-repeat;
 	}
@@ -509,6 +579,7 @@ footer div a img:hover {
 	#services div{
 		display: flex;
 		flex-wrap: wrap;
+		width: 100%;
 		margin-bottom: 60px;
 		box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 	}
@@ -527,6 +598,7 @@ footer div a img:hover {
 }
 /*Responsive styles for desktop and up*/
 @media screen and (min-width: 1024px) {
+
 
 	#hamenu{
 		display: none;
@@ -674,10 +746,17 @@ textarea{
 	box-shadow: 0 4px 3px rgba(0,0,0,0.25), 0 2px 6px rgba(0,0,0,0.22);
 	margin-bottom: 15px;
 	border-radius: 11px;
-	
+	transition: all 0.5s;
+}
+#contSoc ul li a:hover{
+	filter: brightness(1.5);
+}
+#contSoc ul li a:hover img{
+	transform: scale(1.2);
 }
 #contSoc ul li img{
 	height: 50px;
+	transition: all 0.5s;
 }
 #contSoc h3{
 	margin-left: 7px;
@@ -744,6 +823,9 @@ textarea {
 	justify-content: end;
 	color: white;
 	padding: 15px 10%;
+}
+#workHeader p{
+	margin-bottom: 15px;
 }
 #workHeader strong{
 	font-weight: 700;
@@ -816,10 +898,11 @@ textarea {
 }
 #w1, #w2, #w3, #w4, #w5, #w6, #w7, #w8{
 	transition: 0.5s all;
-	background-size: 100% 100%;
+	background-size: 100%;
+	background-color: #070007;
 }
 #w1:hover, #w2:hover, #w3:hover, #w4:hover, #w5:hover, #w6:hover, #w7:hover, #w8:hover{
-	background-size: 120% 120%;
+	background-size: 120%;
 }
 
 @media screen and (min-width: 768px) {
